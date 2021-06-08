@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 1000px;
+}
+
+.wrap {
+    width: 500px;
+    height: 400px;
+    box-sizing: border-box;
+    border: 1px #999 solid;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    padding: 24px 48px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+img {
+    width: 95px;
+    height: 35px;
+}
+
+.inputWrap {
+    display: flex;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.inputLeft {
+    font-size: 12px;
+    color:#999;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.inputLeft div {
+    height: 45px;
+}
+
+.inputRight div {
+    height: 45px;
+}
+
+.inputRight {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inputCheck {
+    font-size: 12px;
+    color:#999;
+}
+
+.join {
+    margin-top: 20px;
+    color:#999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.joinLeft {
+    font-size: 12px;
+    color: #1976d2;
+
+}
+
+.yackwan {
+    font-size: 12px;
+    color:#999;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+button {
+    width: 88px;
+    height: 32px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #1976d2;
+    color:white;
+}
