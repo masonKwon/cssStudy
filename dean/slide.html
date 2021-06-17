@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />    
+    <link rel="stylesheet" href="css/slide.css" />    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- Slider main container -->
+        <div class="swiper-container mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="image/goyang1.jpeg" alt="">
+                    </div>
+                    <div class="txt_box">
+                        <p>엄마가 사온 옷이 맘에 들지 않는다..</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="image/goyang2.jpeg" alt="">
+                    </div>
+                    <div class="txt_box">
+                        <p>우에에에에에에에에에애애애애엥!!!!</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="image/goynag3.jpeg" alt="">
+                    </div>
+                    <div class="txt_box">
+                        <p>쒸익.....</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="image/goyang4.jpeg" alt="">
+                    </div>
+                    <div class="txt_box">
+                        <p>쒸익.,,,,쒸익...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>                
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+            el: ".swiper-pagination",
+            },
+        });
+      </script>
+</body>
+</html>
