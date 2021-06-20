@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />      
+    <link rel="stylesheet" href="/sophie/css/slide.css" />    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/sophie/img/best.png" alt=""></div>
+          <div class="swiper-slide"><img src="/sophie/img/sandwich.png" alt=""></div>
+          <div class="swiper-slide"><img src="/sophie/img/snupi.png" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+</body>
+</html>
