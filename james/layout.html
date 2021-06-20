@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="layout.css">
+
+
+  <!-- JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <title>레이아웃</title>
+</head>
+<body>
+  <div class="wrap">
+    <header>HEADER</header>
+    <main>
+      <section class="table__container">
+        <table>
+          <colgroup>
+            <col style="width: 10%;">
+            <col style="width: 60%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>말머리</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>조회</th>
+              <th>좋아요</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>공지</td>
+              <td>아침 해가 떴습니다.</td>
+              <td>아침햇살</td>
+              <td>10:40</td>
+              <td>2,222</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>공지</td>
+              <td>아침 해가 떴습니다.</td>
+              <td>아침햇살</td>
+              <td>10:40</td>
+              <td>2,222</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>공지</td>
+              <td>아침 해가 떴습니다.</td>
+              <td>아침햇살</td>
+              <td>10:40</td>
+              <td>2,222</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>공지</td>
+              <td>아침 해가 떴습니다.</td>
+              <td>아침햇살</td>
+              <td>10:40</td>
+              <td>2,222</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>공지</td>
+              <td>아침 해가 떴습니다.</td>
+              <td>아침햇살</td>
+              <td>10:40</td>
+              <td>2,222</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="slider__container">
+        <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="mount.jpg" /></div>
+        <div class="swiper-slide"><img src="pass.jpg" /></div>
+        <div class="swiper-slide"><img src="ship.jpg" /></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+      </section>
+      <section class="chart__container">
+        <img src="chart.png" alt="">
+        <img src="chart.png" alt="">
+        <img src="chart.png" alt="">
+      </section>
+    </main>
+    <footer>FOOTER</footer>
+  </div>
+  
+
+
+</body>
+</html>
+
+<script>
+  // Init Swiper
+var swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // Enable debugger
+  debugger: true,
+});
+
+</script>
