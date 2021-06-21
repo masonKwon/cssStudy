@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />    
+    <!-- <link rel="stylesheet" href="css/slide.css" />        -->
+    <link rel="stylesheet" href="css/res.css" />  
+    <link type="text/css" rel="Stylesheet" href="css/tableHtml.css" />  
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#tableContent").load("tableHtml.html");
+            // $("#sliderContent").load("slide.html");
+
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                el: ".swiper-pagination",
+                },
+            });
+        });
+        </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="title">
+            <img src="image/logo_irm.png" alt="">
+            <div class="title_menu">
+                <p>menu1</p>
+                <p>menu2</p>
+                <p>menu3</p>
+            </div>
+        </header>
+        <main>
+            <section id="tableContent" class="table_area">
+            </section>
+            <section id="sliderContent" class="slider_area">
+                <div class="wrap">
+                    <!-- Slider main container -->
+                    <div class="swiper-container mySwiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="img_box">
+                                    <!-- <img src="image/goyang1.jpeg" alt=""> -->
+                                    <img src="image/banner01.png" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="img_box">
+                                    <!-- <img src="image/goyang2.jpeg" alt=""> -->
+                                    <img src="image/banner02.png" alt="">
+                                </div>
+                                <div class="txt_box">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>                
+                    </div>
+                </div>
+            </section>
+            <section class="chart_area">
+                <img src="image/chart.png" alt="">
+            </section>
+        </main>
+        <footer class="copyRight">
+            COPYRIGHT 2021 BY IRM.Inc. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+</body>
+</html>
