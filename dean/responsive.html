@@ -19,6 +19,11 @@
             // $("#sliderContent").load("slide.html");
 
             var swiper = new Swiper(".mySwiper", {
+                loop: true,
+                autoplay: {
+                    delay : 2000,
+                    disableOnInteraction : false,
+                },
                 pagination: {
                 el: ".swiper-pagination",
                 },
@@ -31,9 +36,9 @@
         <header class="title">
             <img src="image/logo_irm.png" alt="">
             <div class="title_menu">
-                <p>menu1</p>
-                <p>menu2</p>
-                <p>menu3</p>
+                <p>Main</p>
+                <p>WorkSpace</p>
+                <p>Settings</p>
             </div>
         </header>
         <main>
