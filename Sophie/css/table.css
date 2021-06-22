@@ -1,0 +1,42 @@
+@charset "utf-8"; 
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+}
+/* 표 꾸밀 때 참고한 블로그 https://jhnyang.tistory.com/285 */
+/* table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    border: 0;
+} */
+table tr{
+    font-size: 12px;
+    /* border-spacing: 10 0 10 0; */
+    /* tr은 뭘로 여백을 줘야 하나요 */
+}
+table td { 
+    padding: 10px 0; 
+    font-size: 11px;
+}
+thead>tr{
+    border-top: 1px solid rgb(151, 151, 151);
+    border-bottom: 1px solid rgb(151, 151, 151);
+    background: rgb(215, 228, 255);
+}
+tbody>tr>td{
+    padding: 10 5 10 10;
+}
+tbody>tr>td:first-child{
+   text-align: center;
+}
+tbody>tr>td:last-child{
+    text-align: center;
+ }
+tbody>tr:last-child{
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+tr:nth-child(even){
+    background: rgba(215, 228, 255, 0.500);
+}

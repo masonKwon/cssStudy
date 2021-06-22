@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 1000px;
+}
+
+.wrap {
+    width: 500px;
+    height: 400px;
+    box-sizing: border-box;
+    border: 1px #999 solid;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    padding: 24px 48px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+img {
+    width: 95px;
+    height: 35px;
+}
+
+.inputWrap {
+    display: flex;
+    padding-right: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.inputWrap div input {
+    width: 316px;
+}
+
+.inputLeft {
+    font-size: 12px;
+    color:#999;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.inputLeft div {
+    height: 45px;
+}
+
+.inputRight div {
+    height: 45px;
+}
+
+.inputRight div input {
+    border-color: #9999;
+    border-left-width:0;
+    border-right-width:0;
+    border-top-width:0;
+    border-bottom-width:1;
+}
+
+
+.inputRight {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.inputCheck {
+    font-size: 12px;
+    color:#999;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    padding-left: 70px;
+
+}
+
+.join {
+    margin-top: 15px;
+    color:#999;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.joinLeft div{
+    font-size: 12px;
+    color: #1976d2;
+    margin-top: 10px;
+
+}
+
+.yackwan {
+    font-size: 12px;
+    color:#999;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+button {
+    width: 88px;
+    height: 32px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #1976d2;
+    color:white;
+}
+
+hr {
+    margin-top: 30px;
+}

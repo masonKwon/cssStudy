@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+
+
+table {
+    border-collapse: separate;
+}
+
+th {
+    height: 30px;
+    background-color: powderblue;
+}
+
+td { 
+    height: 25px;
+    text-align: center;
+    border-bottom:1px solid lightgray;
+
+}
+
+.td_article div{
+    display: table-cell;
+    vertical-align: inherit;
+}

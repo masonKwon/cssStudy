@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <link rel="stylesheet" href="/sophie/css/reset.css">
+    <link rel="stylesheet" href="/sophie/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />        
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="top_menu">
+                <span>Patient</span>
+                <span>Study</span>
+                <span>Form</span>
+                <span>Tele-radiology</span>
+            </div>
+        </header>
+        <main>
+            <section class="table">
+                <table>
+                    <colgroup>
+                        <col width="100">
+                        <col width="300">
+                        <col width="100">
+                    </colgroup>
+                    <thead>
+                        <tr class="table_colum_title">
+                            <th>버전</th>
+                            <th>내용</th>
+                            <th>날짜</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table_contents">
+                        <tr>
+                            <td>v.1.7.0.3</td>
+                            <td>환자 사진 등록기능 추가</td>
+                            <td>2021-05-31</td>
+                        </tr>
+                        <tr>
+                            <td>v.1.7.0.2</td>
+                            <td>버그수정</td>
+                            <td>2021-05-14</td>
+                        </tr>
+                        <tr>
+                            <td>v.1.7.0.1</td>
+                            <td>서버구조 변경</td>
+                            <td>2021-05-06</td>
+                        </tr>
+                        <tr>
+                            <td>v.1.7.0.0</td>
+                            <td>프레임워크 변경</td>
+                            <td>2020-10-30</td>
+                        </tr>
+                        <tr>
+                            <td>v.1.6.0.0</td>
+                            <td>원격판독시스템 기능 추가</td>
+                            <td>2020-09-07</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="slide">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="/sophie/img/best.png" alt=""></div>
+                      <div class="swiper-slide"><img src="/sophie/img/sandwich.png" alt=""></div>
+                      <div class="swiper-slide"><img src="/sophie/img/snupi.png" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="chart">
+                <img src="/sophie/img/chart_geo.png" alt="">
+                <img src="/sophie/img/chart_column.png" alt="">
+                <img src="/sophie/img/chart_pie.png" alt="">
+            </section>
+        </main>
+        <footer>
+            © IRM INC. ALL RIGHTS RESERVED.
+        </footer>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+                    },
+        });
+    </script>
+</body>
+</html>
