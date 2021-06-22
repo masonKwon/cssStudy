@@ -5,7 +5,7 @@ var config = {
         scope               :   'refreshToken',
         client_id           :   'cssstudy',
         redirect_uri        :   'https://masonkwon.github.io/cssStudy/mason/signin.html',
-        host_uri            :   'https://masonkwon.github.io/',
+        host_uri            :   'https://masonkwon.github.io/cssStudy/mason/test2.html',
         resource_server_uri :   'https://xdsserver-dev.irm.kr'
 }
 
