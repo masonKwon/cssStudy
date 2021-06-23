@@ -177,8 +177,7 @@ var config = {
         sign_out_uri        :   'https://oauth2-dev.irm.kr/AuthServer/web/signout',
         scope               :   'refreshToken',
         client_id           :   'cssstudy',
-        redirect_uri        :   'https://masonkwon.github.io/cssStudy/mason/signin.html',
+        redirect_uri        :   'https://masonkwon.github.io/cssStudy/mason/main.html',
         host_uri            :   'https://masonkwon.github.io/cssStudy/mason/test2.html',
         resource_server_uri :   'https://xdsserver-dev.irm.kr'
 }
-
