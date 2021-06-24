@@ -21,9 +21,8 @@ $(function() {
 
 function requestToken(_p_state, _p_code) {
 
-    console.log("ms_console state : ", state);
-    console.log("ms_console lang : ", lang);
-    console.log("ms_console code : ", code);
+    console.log("ms_console state : ", _p_state);
+    console.log("ms_console code : ", _p_code);
 
     var res_access_token = ""; // ex) access_token: "......"
     var res_refresh_token= ""; // ex) refresh_token: "......"
