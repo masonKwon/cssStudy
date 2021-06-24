@@ -177,7 +177,18 @@ var config = {
         sign_out_uri        :   'https://oauth2-dev.irm.kr/AuthServer/web/signout',
         scope               :   'refreshToken',
         client_id           :   'cssstudy',
+        client_secret       :   'cssstudy',
         redirect_uri        :   'https://masonkwon.github.io/cssStudy/mason/main.html',
         host_uri            :   'https://masonkwon.github.io/cssStudy/mason/test2.html',
         resource_server_uri :   'https://xdsserver-dev.irm.kr'
 }
+
+
+/**
+ * Simple Base64 encoding
+ * @param {string} s
+ * @returns {string}
+ */
+const ibase64 = function(s) {
+        return window.btoa(unescape(encodeURIComponent(s)));
+};
