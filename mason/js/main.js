@@ -67,7 +67,7 @@ function requestToken(_p_state, _p_code) {
                 // async: false,
                 method: 'GET',
                 contentType: 'multipart/form-data',
-                url: config.resource_server_uri+"/api/user_myself",
+                url: config.resource_server_uri+"/XDSServer/api/user_myself",
                 dataType: 'json',
                 // cors: true ,
                 // crossDomain: true,
