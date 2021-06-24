@@ -39,7 +39,7 @@ function requestToken(_p_state, _p_code) {
 
     $.ajax({
         // async: false,
-        method: 'GET',
+        method: 'POST',
         contentType: 'application/x-www-form-urlencoded',
         url: config.token_uri,
         dataType: 'json',
