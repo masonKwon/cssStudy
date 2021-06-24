@@ -180,7 +180,7 @@ var config = {
         client_secret       :   'cssstudy',
         redirect_uri        :   'https://masonkwon.github.io/cssStudy/mason/main.html',
         host_uri            :   'https://masonkwon.github.io/cssStudy/mason/test2.html',
-        resource_server_uri :   'http://xdsserver-dev.irm.kr'
+        resource_server_uri :   'https://xdsserver-dev.irm.kr'
 }
 
 
