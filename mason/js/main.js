@@ -51,12 +51,6 @@ function requestToken(_p_state, _p_code) {
         // },
         data: accessTokenRequest_data,
         headers: accessTokenRequest_headers,
-        beforeSend: function(xhr, obj){
-            // xhr.withCredentials = true;
-            if (beforesend && typeof beforesend === 'function') {
-                beforesend(xhr, obj);
-            }
-        },
         success : function (res_tok) {
             res_access_token = res_tok.access_token;
             res_refresh_token = res_tok.refresh_token;
