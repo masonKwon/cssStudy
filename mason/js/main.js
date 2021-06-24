@@ -83,7 +83,7 @@ function requestToken(_p_state, _p_code) {
                 success : function (res_usr) {
                     console.log("ms_console res_usr : ", res_usr)
 
-                    var _oauth_key_name = _s_client_id + '_access_token';
+                    var _oauth_key_name = config.client_id + '_access_token';
                     var _expireTime = new Date(new Date().getTime() + res_expires_in * 1000);
                     var _json_user = res_usr.user;
                     _json_user.vgroup_list.sort(function (a, b) {

@@ -192,3 +192,33 @@ var config = {
 const ibase64 = function(s) {
         return window.btoa(unescape(encodeURIComponent(s)));
 };
+
+
+/*
+ * iutilSetCookie
+ * @param {string} cookie_name : Cookie key name
+ * @param {string} cookie_value : Cookie value
+ * @param {Date} cookie_expire : Expire date
+ */
+function iutilSetCookie(cookie_name, cookie_value, cookie_expire, cookie_domain){
+        let _ret = true;
+
+        if( cookie_name == null || cookie_name == undefined ){
+                _ret = false;
+        }
+
+        if( cookie_expire == null || cookie_expire == undefined ){
+                cookie_expire = new Date(new Date().getTime() + 3600 * 1000); // 1 hour
+        }
+
+        if( cookie_domain == null || cookie_domain == undefined ){
+                cookie_domain = "/";
+        }
+
+        if( _ret ){
+                // Cookies.set(cookie_name, cookie_value, {expires: cookie_expire}, cookie_domain);
+                document.cookie = cookie_name +"="+ cookie_value + ";expires="+ cookie_expire +";path="+ cookie_domain;
+        }
+
+        return _ret;
+}
