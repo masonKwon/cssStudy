@@ -1,6 +1,7 @@
 
 
 function requestAuthorization() {
+    console.log("hi!")
     var siginInURL =
         config.authorization_uri +
         '?response_type=code' +
