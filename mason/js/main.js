@@ -80,12 +80,6 @@ function requestToken(_p_state, _p_code) {
                     include_outside_vgroups : true
                 },
                 headers: requestUserinfo_header,
-                beforeSend: function(xhr, obj){
-                    // xhr.withCredentials = true;
-                    if (beforesend && typeof beforesend === 'function') {
-                        beforesend(xhr, obj);
-                    }
-                },
                 success : function (res_usr) {
                     console.log("ms_console res_usr : ", res_usr)
 
