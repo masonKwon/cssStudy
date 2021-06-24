@@ -67,7 +67,8 @@ function requestToken(_p_state, _p_code) {
 
             console.log("ms_console res_tok : ", res_tok)
 
-            var requestUserinfo_header.Authorization = 'Bearer '+ res_access_token;
+            var requestUserinfo_header = {};
+            requestUserinfo_header.Authorization = 'Bearer '+ res_access_token;
 
             $.ajax({
                 // async: false,
