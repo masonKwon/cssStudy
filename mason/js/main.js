@@ -69,9 +69,9 @@ function requestToken(_p_state, _p_code) {
                 contentType: 'multipart/form-data',
                 url: config.resource_server_uri+"/api/user_myself",
                 dataType: 'json',
-                cors: true ,
-                crossDomain: true,
-                crossOrigin: true,
+                // cors: true ,
+                // crossDomain: true,
+                // crossOrigin: true,
                 // xhrFields: {
                 //     withCredentials: true
                 // },
