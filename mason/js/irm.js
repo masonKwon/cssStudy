@@ -192,8 +192,6 @@ var config = {
 const ibase64 = function(s) {
         return window.btoa(unescape(encodeURIComponent(s)));
 };
-
-
 /*
  * iutilSetCookie
  * @param {string} cookie_name : Cookie key name
