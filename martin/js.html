@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="extLib/jquery-2.2.4/jquery-2.2.4.js"></script>
+    <script src="js/irm.js"></script>
+    <script src="js/signin.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <p>Main login</p>
+        <button onclick="solutionParam()">solution</button>
+    </div>
+</body>
+<script>
+    function solutionParam() {
+        var array = [1,233,523,63,79,82,32];
+        var totalPrice = 1000;
+        
+        // alert ("최대" + solution(arraySort,totalPrice) + "부서를 지원할수있습니다.");
+        solution(array,totalPrice);    
+    }
+    function solution(d,budget){
+        var answer = 0;
+        var i;
+        var arraySort = d.sort(function(a,b){
+             return a-b;
+            });
+            
+
+        console.log(arraySort);
+        // logici
+        // for(var i=0; i < d.index; i++ ) {
+        //     budget - d[i];
+        // }
+        // logic end
+        return answer;
+    }
+</script>
+</html>
