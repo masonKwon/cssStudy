@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.wrap {
+    color:#fff;
+    padding:24px 48px;
+    background-color: #32323c;
+    box-shadow: 0 5px 25px 1px rgb(33 33 33 / 15%);
+    width: 1000px;
+    position: relative;
+}
+.wrap > div {
+    margin-bottom: 30px;
+}
+.btn_calc {
+    display: flex;
+    margin-left: auto;
+    position: relative;
+}
+input {
+    padding:10px;
+    background: rgba(255,255,255,.9);
+    border: 0 solid #000;
+    font-size: 20px;
+}
+input:disabled {
+    background: rgba(255,255,255,.5);
+}
+.text_value {
+    width: 100px;
+}
+li {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+p {
+    line-height: 20px;
+    font-size: 20px;
+}
+button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    border: none;
+    font-size: 18px;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    outline: none;
+    border-radius: 3px;
+    margin: 0;
+    padding: 23px 33px;
+    border: 3px solid transparent;
+    position: relative;
+    z-index: 1;
+}
+button:active {
+    transform: translateY(3px);
+}
+button::after, button::before {
+    border-radius: 3px;
+}
+.material-bubble {
+    background-color: transparent;
+    color: #e6e6e6;
+    border: none;
+    overflow: hidden;
+    box-shadow: none;
+    cursor: pointer;
+}
+.material-bubble:hover {
+    color: #e6e6e6;
+}
+.material-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255,255,255,.1);
+    transition: opacity 0.3s, border 0.3s;
+}
+.material-bubble:hover::before {
+    opacity: 0;
+}
+.material-bubble::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #494958;
+    border-color: transparent;
+    border-radius: 50%;
+    transform: translate(-10px, -70px) scale(0.1);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.material-bubble:hover::after {
+    opacity: 1;
+    transform-origin: 100px 100px;
+    transform: scale(1) translate(-10px, -70px);
+}
+.answer_box {
+    margin-top: 50px;
+    border: 1px solid rgba(255,255,255,.5);
+    padding:20px;
+}
