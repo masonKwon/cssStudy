@@ -6,41 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/js.css">
 
     <script src="extLib/jquery-2.2.4/jquery-2.2.4.js"></script>
     <script src="js/irm.js"></script>
-    <script src="js/signin.js"></script>
+    <script src="js/js.js"></script>
 </head>
 <body>
     <div class="wrap">
-        <p>Main login</p>
-        <button onclick="solutionParam()">solution</button>
+        <h1>[Js study 1차]</h1>
+        <h2>유의사항</h2>
+        <ul class="question">
+            <li>* d는 부서별로 신청한 금액이 들어있는 배열이며, 길이(전체 부서의 개수)는 1 이상 100 이하입니다.</li>
+            <li>* d의 각 원소는 부서별로 신청한 금액을 나타내며, 부서별 신청 금액은 1 이상 100,000 이하의 자연수입니다.</li>
+            <li>* budget은 예산을 나타내며, 1 이상 10,000,000 이하의 자연수입니다.</li>
+
+        </ul>
+        
+        <div class="answer_box">
+            <p>
+                (주)IRM에서는 <input type="text" class="d" onchange="maxBudget(this)"> 원의 예산으로 <br><br>
+                총 사용 예산은 <input type="text" class="totalD" disabled> 원으로 <br><br>
+                최대 <input class="text_value" disabled> 부서를 지원할 수 있습니다. <br><br>
+                잔여 예산은 <input type="text" class="remaining_amount" disabled> 원 입니다.
+            </p>
+        </div>
+        
+        <button onclick="calculate()" class="btn_calc material-bubble">calculate</button>
     </div>
 </body>
-<script>
-    function solutionParam() {
-        var array = [1,233,523,63,79,82,32];
-        var totalPrice = 1000;
-        
-        // alert ("최대" + solution(arraySort,totalPrice) + "부서를 지원할수있습니다.");
-        solution(array,totalPrice);    
-    }
-    function solution(d,budget){
-        var answer = 0;
-        var i;
-        var arraySort = d.sort(function(a,b){
-             return a-b;
-            });
-            
-
-        console.log(arraySort);
-        // logici
-        // for(var i=0; i < d.index; i++ ) {
-        //     budget - d[i];
-        // }
-        // logic end
-        return answer;
-    }
-</script>
 </html>
