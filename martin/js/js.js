@@ -1,5 +1,6 @@
+var array = [1,233,523,63,79,82,32]; // 부서별 신청금액 : 부서별 입력 ui 만들면 좋음
 function calculate() {
-    let array = [1,233,523,63,79,82,32]; // 부서별 신청금액 : 부서별 입력 ui 만들면 좋음
+    
     // array.length = 100; // 부서의 개수는 100로 제한한다 : 부서의 갯수를 어떻게 제한알수있나?
 
     let totalPrice = Number(document.querySelector('.d').value); // 예산은 범위내에서 입력 가능하다
@@ -22,7 +23,7 @@ function solution(d,budget){
         answerTotal += arraySort[answer];
         if(answerTotal >= budget) {
             
-            break;      
+            break;
         }
     }
     
