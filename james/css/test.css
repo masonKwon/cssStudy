@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+    padding : 24px 48px;
+    width: 496px;
+    height: 408px;
+    background: #fff;
+    box-shadow: 0 5px 25px 1px rgb(33 33 33 / 15%);
+
+}
+.wrap2 {
+    padding : 24px 48px;
+    width: 1496px;
+    height: 1408px;
+    background: #fff;
+    box-shadow: 0 5px 25px 1px rgb(33 33 33 / 15%);
+
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+}
+.wrap .top h1{
+  font-size: 18px;
+  font-weight: bold;
+}
+.wrap > div {
+  margin : 20px;
+}
+.wrap > div:last-child {
+  margin-bottom: : 0;
+}
+/* .wrap > div:nth-child(2) {
+  margin-bottom: : 1000px;
+} */
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height : 52px;
+}
+
+.content input {
+  width: calc(100% - 89px);
+  height: 24px;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 0 3px;
+  margin: 3px 0;
+  border-radius: 0;
+}
+.content input::placeholder {
+  color: #D1D1D1;
+  font-weight: 100;
+}
+.div-left {
+  width: 89px;
+  color: #999999;
+  font-size: 12px;
+}
+
+.chkRememberId {
+  display: flex;
+  align-items: center;
+  color: #999999;
+  font-size: 11px;
+  margin-top: 10px;
+
+}
+.chkRememberId input {
+  margin-left: 89px;
+}
+.joinArea {
+  display: flex;
+  flex-direction: column;
+}
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+.joinArea::before {
+  content: '';
+  border-top: 1px solid #dfdfdf;
+  padding-top: 10px;
+  width: 100%;
+}
+.temp {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  align-items: center;
+}
+.temp2 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #999999;
+  font-size: 22px;
+
+}
+.temp2 a {
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.loginBtn {
+  color: #ffffff;
+  background-color: #1976d2;
+  height: 32px;
+  padding: 0 25px;
+  border: 1px solid #1976d2;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.footer a{
+  color: #999999;
+  font-size: 12px;
+}
