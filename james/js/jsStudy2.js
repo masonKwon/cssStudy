@@ -42,7 +42,7 @@ function sum_solution(array) {
 
   var new_array = [];
   for(var i=0;i<array.length;i++) {
-    if(array)
+    // if(array)
   }
 
   console.log(array);
