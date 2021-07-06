@@ -16,20 +16,29 @@ function solution(d, budget) {
 
 //문제1
 function solution2(phone_number) {
-    // var answer = '';
-    //
-    // var phone_num = phone_number.slice(-4);
-    // var temp = '';
-    // for(var i=0; i<phone_number.length-4; i++){
-    //     temp += '*';
-    // }
-    // answer = temp + phone_num;
-    //
-    //
-    // return answer;
-    return phone_number.replace(/\d(?=\d{4})/g, "*");
+    var answer = '';
+
+    var phone_num = phone_number.slice(-4);
+    var temp = '';
+    for(var i=0; i<phone_number.length-4; i++){
+        temp += '*';
+    }
+    answer = temp + phone_num;
+
+
+    return answer;
+    // return phone_number.replace(/\d(?=\d{4})/g, "*");
 
 }
+
+
+
+
+
+
+
+
+
 
 //문제2
 function solution3(numbers) {

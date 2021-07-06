@@ -7,7 +7,9 @@ function calculate() {
     let regex = /[0-9]/g;
     let printTxt = numberStr.replace(regex,"*");
     let result = printTxt.substr(4) + text;
-    console.log(text,printTxt,result);
+    console.log("test: ", text);
+    console.log("printTxt: ", printTxt);
+    console.log("result: ", result);
 
 }
 
