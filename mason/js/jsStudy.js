@@ -31,15 +31,6 @@ function solution2(phone_number) {
 
 }
 
-
-
-
-
-
-
-
-
-
 //문제2
 function solution3(numbers) {
     var answer = [];
@@ -63,4 +54,55 @@ function solution3(numbers) {
         return a - b;
     });
     return answer;
+}
+
+//k번째
+function solution4(array, commands) {
+    var answer = [];
+
+    for(var i=0; i<commands.length;i++){
+        var list = array.slice(commands[i][0]-1, commands[i][1]).sort((a,b)=>{return a-b});
+
+        answer.push(list[commands[i][2]-1]);
+    }
+
+    return answer;
+}
+
+function solution5(participant, completion) {
+    const total = participant.length;
+    var answer = '';
+
+    participant.sort();
+    completion.sort();
+
+    for(let i=0; i<total; i++){
+        if(participant[i] !== completion[i]){
+            answer = participant[i];
+            return answer;
+        }
+    }
+
+    /////////////////////
+    const myMap = new Map();
+
+    for ( const participant of participants){
+        if(!myMap.get(participant)){
+            myMap.set(participant, 1);
+        }else{
+            myMap.set(participant, myMap.get(participant)+1);
+        }
+    }
+
+    for(const completion of completions){
+        if(myMap.get(completion)){
+            myMap.set(completion, myMap.get(completion)-1);
+        }
+    }
+
+    for(const participant of participants){
+        if(myMap.get(participant) && myMap.get(participant) >=1 ){
+            answer = participant;
+        }
+    }
 }
