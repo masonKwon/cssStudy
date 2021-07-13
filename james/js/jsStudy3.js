@@ -103,4 +103,3 @@ function removeDuplication(array) {
 //     });
     
 //     console.log('result   ', result);
-}
