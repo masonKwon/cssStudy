@@ -8,7 +8,7 @@ function calculate() {
     let regex = /[0-9]/g;
     let printTxt = numberStr.replace(regex,"*");
     let result = printTxt.substr(4) + text;
-    console.log("입력된 수 뒷 4자리 : "+text,'\n',"결과 :"+result);
+    console.log(text,printTxt,result);
 
 }
 
@@ -22,7 +22,7 @@ function arrayInput() {
     let resultArray = [];
 
     for( let i = 0; i < arraySort.length; i++ ) { // : ?? forEach 안되나요??
-        for( let j = 0; j < arraySort.length; j++) {
+        for( let j = i+1; j < arraySort.length; j++) {
             if( !(j==i)) { // 같은 인덱스는 제외 : ?? 이 방법이 맞는지?
                 resultArray.push( arraySort[i] + arraySort[j] ); // 새로운 배열에 더한값을 추가
             }
@@ -35,6 +35,7 @@ function arrayInput() {
     document.querySelector('.resultTxt').value = finalArray;
 
 }
+[1,2,3,4,5]
 
 // 함수를 자동으로 생성
 function addArraySize() {
@@ -49,6 +50,8 @@ function addArraySize() {
     document.querySelector('.arrySize').value = "";
     // console.log(numbersArray);
     // return numbersArray;
+    numbersArray = [5,0,2,7];
+
 }
 
 /* 유효성 검사 */
