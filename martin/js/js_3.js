@@ -53,14 +53,13 @@ function makeCommands() {
         commandsArray[i] = [];
         for(let j = 0; j < 3; j++) {                        
             commandsArray[i][j] = [];
-            let randomNum = Math.floor(Math.random() * 10) + 1;            
+            let randomNum = Math.floor(Math.random() * 10) + 1;            // 1~10랜덤생성
             let firstNum = commandsArray[i][0];
             if (j == 1 ) {
-                randomNum = Math.floor(Math.random() * (10 - Number(firstNum))) + Number(firstNum);            
-                console.log(Number(firstNum),randomNum);
+                randomNum = Math.floor(Math.random() * (10 - Number(firstNum))) + Number(firstNum);            // 2번째 인자는 첫번째 보다 커야한다
             }
             let secondNum = commandsArray[i][1];
-            if (j == 2 ) {
+            if (j == 2 ) { // 1,2번째의 차보다 작으면 안된다.
                 // commandsArray[i][2] = Math.abs(firstNum - secondNum) + 1;
                 let testNum = Math.abs(firstNum - secondNum) + 1;
                 randomNum = Math.floor(Math.random() * testNum) + 1 ;
@@ -91,64 +90,51 @@ function makePlayer() {
     let newPlayerArray = [];
     
     for(let i = 0; i < arraySize; i++) {
-        playersArray[i] = [];
+        playersArray[i] = [];        
         let nameSize = Math.floor(Math.random() * 5)+1;
-        for(let j = 0; j < nameSize; j++) {
-            playersArray[i].push(String.fromCharCode((Math.random() * 26) +97));
+        for(let j = 0; j < nameSize; j++) {            
+            playersArray[i][j] = [];
+            playersArray[i][j].push(String.fromCharCode((Math.random() * 26) +97));
         }
         
-        console.log(playersArray[i]);
+        // console.log(playersArray[i]);
         
     }
-    let str1 ='';
-    // let str2 ='';
-    for( let i = 0; i < playersArray.length; i++ ) {        
-        for( let j = 0; j < playersArray[i].length; j++ ) {
-            // str2 += playersArray[i][j];
-            console.log(playersArray[i][j]);
-            // console.log(str);            
-            // str1 += "["+ str2 +"]";
-            str1 += playersArray[i][j] + (i == playersArray[i].legnth - 1 ? '' : ",");
-            // str += playersArray[i][j] + (i == playersArray[].legnth - 1 ? '' : separator);
+    let nameArray = "";
+    for ( let i = 0; i < playersArray.length; i++ ){
+        for ( let j = 0; j < playersArray[i]; j++ ) {
+            nameArray = playersArray[i][j].join("");
         }
-        
-        
     }
+    let playerTxt = playersArray.join("],[");
+    console.log("["+playerTxt+"]");
+    console.log(nameArray);
+    // let str1 ='';
+    // // let str2 ='';
+    // for( let i = 0; i < playersArray.length; i++ ) {        
+    //     for( let j = 0; j < playersArray[i].length; j++ ) {
+    //         // str2 += playersArray[i][j];
+    //         console.log(playersArray[i][j]);
+    //         // console.log(str);            
+    //         // str1 += "["+ str2 +"]";
+    //         str1 += playersArray[i][j] + (i == playersArray[i].legnth - 1 ? '' : ",");
+    //         // str += playersArray[i][j] + (i == playersArray[].legnth - 1 ? '' : separator);
+    //     }
+        
+        
+    // }
 
     if( arraySize == "" ) {
         alert("입력한 값이 없습니다.");
     } else {
-        array = playersArray;
-        document.querySelector('#arrayPlayer').innerHTML = "[" + str1 + "]"; // 생성된 배열 출력
-        document.querySelector('.arrySize').value = "";
+        document.querySelector('#arrayPlayer').innerHTML = "[" + playerTxt + "]"; // 생성된 배열 출력
+        // document.querySelector('.arrySize').value = "";
         console.log(playersArray);
     }    
-    console.log(str1);
+    // console.log(str1);
 
 
 }
-/* 2) 배열의 합이 중복되지 않게 오름차순으로 반환 */
-
-function arrayInput() {
-    let arraySort = numbersArray; // 자동 생성된 배열을 가져온다.
-    let resultArray = [];
-
-    for( let i = 0; i < arraySort.length; i++ ) { // : ?? forEach 안되나요??
-        for( let j = 0; j < arraySort.length; j++) {
-            if( !(j==i)) { // 같은 인덱스는 제외 : ?? 이 방법이 맞는지?
-                resultArray.push( arraySort[i] + arraySort[j] ); // 새로운 배열에 더한값을 추가
-            }            
-        }
-    }
-    let set = new Set(resultArray); // 배열을 객체로 만든 후 중복제거
-    let finalData = [...set]; // 객체럴 다시 배열로 변환 : ...전개연산자
-    // console.log(finalData.sort(function(a,b){return a-b;})); 
-    let finalArray = finalData.sort(function(a,b){return a-b;}); // 오름차순으로 정렬된 값을 할당
-    document.querySelector('.resultTxt').value = finalArray;
-    
-}
-
-
 
 /* 유효성 검사 */
 function maxBudget(el) {
