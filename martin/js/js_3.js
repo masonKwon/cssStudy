@@ -43,14 +43,6 @@ function makeArray() {
     } else {
         console.error("")
     }
-
-    try {
-        //logic
-    }catch() {
-        //error appear logic
-    }finally {
-        //whatever (success/fail)
-    }
 }
 
 //Commands를 자동으로 생성
@@ -97,30 +89,35 @@ function makeCommands() {
 /* 2) 마라톤 참가자 랜덤 생성 */
 function makePlayer() {
     let playersArray = [];
+
     let arraySize = document.querySelector('.arrySize2').value; // 입력한 배열의 크기를 가져온다.
     let playName = "";
     let newPlayerArray = [];
     
     for(let i = 0; i < arraySize; i++) {
-        playersArray[i] = [];        
+        playersArray[i] = [];
+        var temp_name = '';
+
         let nameSize = Math.floor(Math.random() * 5)+1;
-        for(let j = 0; j < nameSize; j++) {            
+        // for(let j = 0; j < nameSize; j++) {
+            // temp_name += String.fromCharCode((Math.random() * 26) +97);
+        // }
+        for(let j = 0; j < nameSize; j++) {
             playersArray[i][j] = [];
             playersArray[i][j].push(String.fromCharCode((Math.random() * 26) +97));
         }
         
         // console.log(playersArray[i]);
-        
     }
-    let nameArray = "";
+    let playerTxtArray = [];
     for ( let i = 0; i < playersArray.length; i++ ){
-        for ( let j = 0; j < playersArray[i]; j++ ) {
-            nameArray = playersArray[i][j].join("");
-        }
+        playerTxtArray[i] = playersArray[i].join("");
+        // for ( let j = 0; j < playersArray[i]; j++ ) {
+        // }
     }
-    let playerTxt = playersArray.join("],[");
-    console.log("["+playerTxt+"]");
-    console.log(nameArray);
+    // let playerTxt = playersArray.join("],[");
+    // console.log("["+playerTxt+"]");
+    console.log(playerTxtArray);
     // let str1 ='';
     // // let str2 ='';
     // for( let i = 0; i < playersArray.length; i++ ) {        
@@ -139,7 +136,7 @@ function makePlayer() {
     if( arraySize == "" ) {
         alert("입력한 값이 없습니다.");
     } else {
-        document.querySelector('#arrayPlayer').innerHTML = "[" + playerTxt + "]"; // 생성된 배열 출력
+        document.querySelector('#arrayPlayer').innerHTML = "[" + playerTxtArray + "]"; // 생성된 배열 출력
         // document.querySelector('.arrySize').value = "";
         console.log(playersArray);
     }    
