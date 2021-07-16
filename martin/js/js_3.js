@@ -21,8 +21,7 @@ function calculate() {
         returnArray.push(addNum);
     }
     console.log("최종반환값 = " + returnArray);
-    // console.log(commands);
-
+    document.querySelector('#resultTxt').innerHTML = returnArray;
 }
 // array를 자동으로 생성
 function makeArray() {
@@ -31,7 +30,7 @@ function makeArray() {
     
     
     for(var i = 0; i < arraySize; i++) {                
-        numbersArray.push(Math.floor(Math.random() * 100)+1); // numbers 배열의 크기만큼 요소에 숫자 추가
+        numbersArray.push(Math.floor(Math.random() * 100)+11); // numbers 배열의 크기만큼 요소에 숫자 추가
     }
     if( arraySize == "" ) {
         alert("입력한 값이 없습니다.");
@@ -46,31 +45,88 @@ function makeArray() {
 function makeCommands() {
     let = commandsArray = [];
     // let = result = [];
-    let randomCommandsSize = Math.floor(Math.random() * 50)+1; // 실제 사용할 것
+    let randomCommandsSize = Math.floor(Math.random() * 10)+1; // 실제 사용할 것
     commandsArray.length = randomCommandsSize; // 실제 사용할 것
     
     // let randomCommandsSize = 3; // 테스트용
-    
     for(let i = 0; i < randomCommandsSize; i++) {
         commandsArray[i] = [];
-
         for(let j = 0; j < 3; j++) {                        
-            commandsArray[i][j] = [];            
-            commandsArray[i][j].push(Math.floor(Math.random() * 10)+1);
+            commandsArray[i][j] = [];
+            let randomNum = Math.floor(Math.random() * 10) + 1;            
+            let firstNum = commandsArray[i][0];
+            if (j == 1 ) {
+                randomNum = Math.floor(Math.random() * (10 - Number(firstNum))) + Number(firstNum);            
+                console.log(Number(firstNum),randomNum);
+            }
+            let secondNum = commandsArray[i][1];
+            if (j == 2 ) {
+                // commandsArray[i][2] = Math.abs(firstNum - secondNum) + 1;
+                let testNum = Math.abs(firstNum - secondNum) + 1;
+                randomNum = Math.floor(Math.random() * testNum) + 1 ;
+            }
+            
+            commandsArray[i][j].push(randomNum);
             console.log("["+ commandsArray +"]");     
             console.log(commandsArray);             
 
             // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
         }
-        document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
+        
     }
     commands = commandsArray;
+    let commandsTxt = commandsArray.join("],[");
+    document.querySelector('#commandsArray').innerHTML = "[" + commandsTxt + "]"; // 생성된 배열 출력   
     document.querySelector('#commandsSize').innerHTML = randomCommandsSize; // 생성된 배열 출력   
     // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
     // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
 }
 
 
+/* 2) 마라톤 참가자 랜덤 생성 */
+function makePlayer() {
+    let playersArray = [];
+    let arraySize = document.querySelector('.arrySize2').value; // 입력한 배열의 크기를 가져온다.
+    let playName = "";
+    let newPlayerArray = [];
+    
+    for(let i = 0; i < arraySize; i++) {
+        playersArray[i] = [];
+        let nameSize = Math.floor(Math.random() * 5)+1;
+        for(let j = 0; j < nameSize; j++) {
+            playersArray[i].push(String.fromCharCode((Math.random() * 26) +97));
+        }
+        
+        console.log(playersArray[i]);
+        
+    }
+    let str1 ='';
+    // let str2 ='';
+    for( let i = 0; i < playersArray.length; i++ ) {        
+        for( let j = 0; j < playersArray[i].length; j++ ) {
+            // str2 += playersArray[i][j];
+            console.log(playersArray[i][j]);
+            // console.log(str);            
+            // str1 += "["+ str2 +"]";
+            str1 += playersArray[i][j] + (i == playersArray[i].legnth - 1 ? '' : ",");
+            // str += playersArray[i][j] + (i == playersArray[].legnth - 1 ? '' : separator);
+        }
+        
+        
+    }
+
+    if( arraySize == "" ) {
+        alert("입력한 값이 없습니다.");
+    } else {
+        array = playersArray;
+        document.querySelector('#arrayPlayer').innerHTML = "[" + str1 + "]"; // 생성된 배열 출력
+        document.querySelector('.arrySize').value = "";
+        console.log(playersArray);
+    }    
+    console.log(str1);
+
+
+}
 /* 2) 배열의 합이 중복되지 않게 오름차순으로 반환 */
 
 function arrayInput() {
@@ -101,8 +157,8 @@ function maxBudget(el) {
         alert("array는 숫자만 입력해 주십시오.");
         el.value = "";
     }
-    if(val < 1 || val > 100) {
-        alert("array는 1~100 범위로 입력해 주십시오.");
+    if(val < 10 || val > 100) {
+        alert("array는 10~100 범위로 입력해 주십시오.");
         el.value = "";
     }
 }
