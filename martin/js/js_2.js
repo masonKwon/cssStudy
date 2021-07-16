@@ -31,11 +31,10 @@ function arrayInput() {
     let set = new Set(resultArray); // 배열을 객체로 만든 후 중복제거
     let finalData = [...set]; // 객체럴 다시 배열로 변환 : ...전개연산자
     // console.log(finalData.sort(function(a,b){return a-b;}));
-    let finalArray = finalData.sort(function(a,b){return a-b;}); // 오름차순으로 정렬된 값을 할당
+    let finalData = finalData.sort(function(a,b){return a-b;}); // 오름차순으로 정렬된 값을 할당
     document.querySelector('.resultTxt').value = finalArray;
 
 }
-[1,2,3,4,5]
 
 // 함수를 자동으로 생성
 function addArraySize() {

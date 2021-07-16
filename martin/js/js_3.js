@@ -8,36 +8,48 @@ function calculate() {
     for(let i = 0; i < commands.length; i++){        
         let firsttNum = commands[i][0];
         let secondNum = commands[i][1];
-        let sliceIdx = commands[i][2];    
+        let sliceIdx = commands[i][2];
+        let resultArray = array.slice(firsttNum - 1, secondNum).sort(function(a,b){return a-b;});
         // console.log("commands의" + i + "번째 배열의 요소" + '\n' + firsttNum,secondNum,sliceIdx);
-        console.log( 
+        console.log(
             "commands의 " + (i+1) +" 번째 정리 배열" + '\n' +
-            array.slice(firsttNum - 1,secondNum).sort(function(a,b){return a-b;}) + '\n' +
+            resultArray + '\n' +
             sliceIdx + "번째 추출"
         );
-        let resultArray = array.slice(firsttNum - 1, secondNum).sort(function(a,b){return a-b;});
-        let addNum = resultArray.splice(sliceIdx -1,1).pop();
+        let addNum =
+        // let addNum = resultArray.splice(sliceIdx -1,1).pop();
 
-        returnArray.push(addNum);
+        // returnArray.push(addNum);
+        returnArray.push(resultArray[sliceIdx-1]);
     }
     console.log("최종반환값 = " + returnArray);
     document.querySelector('#resultTxt').innerHTML = returnArray;
 }
 // array를 자동으로 생성
 function makeArray() {
-    let = numbersArray = [];
+    let numbersArray = [];
     let arraySize = document.querySelector('.arrySize').value; // 입력한 배열의 크기를 가져온다.
     
     
     for(var i = 0; i < arraySize; i++) {                
         numbersArray.push(Math.floor(Math.random() * 100)+11); // numbers 배열의 크기만큼 요소에 숫자 추가
     }
-    if( arraySize == "" ) {
+    if( arraySize < 0 ) {
         alert("입력한 값이 없습니다.");
-    } else {
+    } else if(arraySize > 0){
         array = numbersArray;
         document.querySelector('#arrayData').innerHTML = "[" + numbersArray + "]"; // 생성된 배열 출력
         document.querySelector('.arrySize').value = "";
+    } else {
+        console.error("")
+    }
+
+    try {
+        //logic
+    }catch() {
+        //error appear logic
+    }finally {
+        //whatever (success/fail)
     }
 }
 
@@ -66,7 +78,7 @@ function makeCommands() {
             }
             
             commandsArray[i][j].push(randomNum);
-            console.log("["+ commandsArray +"]");     
+            console.log("["+ commandsArray +"]");
             console.log(commandsArray);             
 
             // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
