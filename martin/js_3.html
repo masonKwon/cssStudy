@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/js.css"> -->
+    <link rel="stylesheet" href="css/common.min.css">
+
+    <script src="extLib/jquery-2.2.4/jquery-2.2.4.js"></script>
+    <script src="js/irm.js"></script>
+    <script src="js/js_3.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>[Js study 3차]</h1>
+        <h2>1) k번째 구하기 </h2>        
+        <ul class="question">
+            <li>* array의 길이는 1 이상 100 이하입니다.[ 최소값을 11로 수정 ]</li>
+            <li>* array의 각 원소는 1 이상 100 이하입니다.</li>
+            <li>* commands의 길이는 1 이상 50 이하입니다. [ 최대값을 10으로 수정 ]</li>
+            <li>* commands의 각 원소는 길이가 3입니다.</li>
+        </ul>
+        <div class="answer_box">
+            <p class="t1"> array 길이 
+                <input type="text" class="arrySize" onchange="maxBudget(this)"> 만큼 랜덤 생성 
+                <button type="button" class="btn_calc material-bubble" onclick="makeArray()">생성</button>
+            </p>
+            <p class="t1">Array = <span id="arrayData"></span></p>
+
+            <p class="t1">
+                commands를 랜덤 생성 <button type="button" class="btn_calc material-bubble" onclick="makeCommands()">생성</button>
+                
+            </p>
+            <p class="t1">
+                자동 생성된 commands의 길이 =  [<span id="commandsSize"></span>] <br>
+            </p>
+            
+            <p class="t1">commands = [<span id="commandsArray"></span>]</p>
+            <!-- <input type="text" class="text_value"> -->
+            <p class="t1">최종 반환 값 [ <span id="resultTxt"></span> ]</p>
+            <button onclick="calculate()" class="btn_calc material-bubble">calculate</button>
+        </div>
+
+        <h2>2) 미완주 선수 이름 구하기</h2>
+        <ul class="question">
+            <li>* 마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.</li>
+            <li>* completion의 길이는 participant의 길이보다 1 작습니다.</li>
+            <li>* 참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.</li>
+            <li>* 참가자 중에는 동명이인이 있을 수 있습니다.</li>
+        </ul>
+        <div class="answer_box">
+            <p class="t1">
+                <input type="text" class="arrySize2" onchange="maxBudget(this)"> 만큼 랜덤 생성 
+                <button type="button" class="btn_calc material-bubble" onclick="makePlayer()">생성</button>
+            </p>
+            <p class="t1">참가자 = [<span id="arrayPlayer"></span>]</p>
+
+            <p class="t1">
+                마라톤 시작 <button type="button" class="btn_calc material-bubble" onclick="startGame()">시작</button>
+                
+            </p>
+            <p class="t1">
+                완주자 목록 =  [<span id="finishedList"></span>]
+            </p>
+            
+            <p class="t1">
+                미완주자 = [<span id="unfinishedList"></span>]
+            </p>
+            <!-- <input type="text" class="text_value"> -->
+
+            <!-- <button onclick="calculate()" class="btn_calc material-bubble">calculate</button> -->
+        </div>
+
+        
+    </div>
+</body>
+</html>

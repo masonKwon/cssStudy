@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/js.css">
+
+    <script src="extLib/jquery-2.2.4/jquery-2.2.4.js"></script>
+    <script src="js/irm.js"></script>
+    <script src="js/js_2.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>[Js study 2차]</h1>
+        <h2>1) 전화번호 뒷4자리 리턴</h2>
+        <div class="answer_box">
+            <input type="text" class="text_value">
+            <button onclick="calculate()" class="btn_calc material-bubble">calculate</button>
+        </div>
+
+        <h2>2) 배열의 합 구하기</h2>
+        <ul class="question">
+            <li>* numbers의 길이는 2 이상 100 이하입니다.</li>
+            <li>* numbers의 모든 수는 0 이상 100 이하입니다.</li>
+        </ul>
+        
+        <div class="answer_box">
+            <p>생성된 numbers = [<span class="numbers"></span>]</p>
+            <br><br>
+            <p>
+                배열의 크기 <input type="text" class="arrySize" onchange="maxBudget(this)"> 만큼 자동 생성 
+                <button class="btn btn_calc material-bubble" onclick="addArraySize()">생성</button>
+            </p>
+            <br><br>
+            <p>
+                결과 <input type="text" class="resultTxt">
+            </p>
+            <span class="text_value2"></span>
+            <button onclick="arrayInput()" class="btn_calc material-bubble">calculate</button>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
