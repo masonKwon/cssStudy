@@ -1,4 +1,3 @@
-
 /* 1) i,j,k 매개변수를 통해 기존 배열읠 잘라서 새로운 배열에 담는다 */
 var array = [1, 5, 2, 6, 3, 7, 4];
 var commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];    
@@ -9,40 +8,36 @@ function calculate() {
     for(let i = 0; i < commands.length; i++){        
         let firsttNum = commands[i][0];
         let secondNum = commands[i][1];
-        let sliceIdx = commands[i][2];
-        let resultArray = array.slice(firsttNum - 1, secondNum).sort(function(a,b){return a-b;});
+        let sliceIdx = commands[i][2];    
         // console.log("commands의" + i + "번째 배열의 요소" + '\n' + firsttNum,secondNum,sliceIdx);
-        console.log(
+        console.log( 
             "commands의 " + (i+1) +" 번째 정리 배열" + '\n' +
-            resultArray + '\n' +
+            array.slice(firsttNum - 1,secondNum).sort(function(a,b){return a-b;}) + '\n' +
             sliceIdx + "번째 추출"
         );
-        let addNum =
-        // let addNum = resultArray.splice(sliceIdx -1,1).pop();
+        let resultArray = array.slice(firsttNum - 1, secondNum).sort(function(a,b){return a-b;});
+        let addNum = resultArray.splice(sliceIdx -1,1).pop();
 
-        // returnArray.push(addNum);
-        returnArray.push(resultArray[sliceIdx-1]);
+        returnArray.push(addNum);
     }
     console.log("최종반환값 = " + returnArray);
     document.querySelector('#resultTxt').innerHTML = returnArray;
 }
 // array를 자동으로 생성
 function makeArray() {
-    let numbersArray = [];
+    let = numbersArray = [];
     let arraySize = document.querySelector('.arrySize').value; // 입력한 배열의 크기를 가져온다.
     
     
     for(var i = 0; i < arraySize; i++) {                
         numbersArray.push(Math.floor(Math.random() * 100)+11); // numbers 배열의 크기만큼 요소에 숫자 추가
     }
-    if( arraySize < 0 ) {
+    if( arraySize == "" ) {
         alert("입력한 값이 없습니다.");
-    } else if(arraySize > 0){
+    } else {
         array = numbersArray;
         document.querySelector('#arrayData').innerHTML = "[" + numbersArray + "]"; // 생성된 배열 출력
         document.querySelector('.arrySize').value = "";
-    } else {
-        console.error("")
     }
 }
 
@@ -71,7 +66,7 @@ function makeCommands() {
             }
             
             commandsArray[i][j].push(randomNum);
-            console.log("["+ commandsArray +"]");
+            console.log("["+ commandsArray +"]");     
             console.log(commandsArray);             
 
             // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
@@ -86,52 +81,61 @@ function makeCommands() {
     // document.querySelector('#commandsArray').innerHTML = "[" + commandsArray + "]"; // 생성된 배열 출력   
 }
 
-var user;
+
 /* 2) 마라톤 참가자 랜덤 생성 */
 function makePlayer() {
     let playersArray = [];
     let arraySize = document.querySelector('.arrySize2').value; // 입력한 배열의 크기를 가져온다.
-
+    let playName = "";
+    let newPlayerArray = [];
+    
     for(let i = 0; i < arraySize; i++) {
-        playersArray[i] = [];
-
+        playersArray[i] = [];        
         let nameSize = Math.floor(Math.random() * 5)+1;
-        for(let j = 0; j < nameSize; j++) {
-            // playersArray[i][j] = [];
-            playersArray[i].push(String.fromCharCode((Math.random() * 26) +97));
+        for(let j = 0; j < nameSize; j++) {            
+            playersArray[i][j] = [];
+            playersArray[i][j].push(String.fromCharCode((Math.random() * 26) +97));
         }
         
         // console.log(playersArray[i]);
+        
     }
-    let playerTxtArray = [];
-    for ( let i = 0; i < playersArray.length; i++ ){                
-        playerTxtArray[i] = playersArray[i].join("");
+    let nameArray = "";
+    for ( let i = 0; i < playersArray.length; i++ ){
+        for ( let j = 0; j < playersArray[i]; j++ ) {
+            nameArray = playersArray[i][j].join("");
+        }
     }
-    
+    let playerTxt = playersArray.join("],[");
+    console.log("["+playerTxt+"]");
+    console.log(nameArray);
+    // let str1 ='';
+    // // let str2 ='';
+    // for( let i = 0; i < playersArray.length; i++ ) {        
+    //     for( let j = 0; j < playersArray[i].length; j++ ) {
+    //         // str2 += playersArray[i][j];
+    //         console.log(playersArray[i][j]);
+    //         // console.log(str);            
+    //         // str1 += "["+ str2 +"]";
+    //         str1 += playersArray[i][j] + (i == playersArray[i].legnth - 1 ? '' : ",");
+    //         // str += playersArray[i][j] + (i == playersArray[].legnth - 1 ? '' : separator);
+    //     }
+        
+        
+    // }
+
     if( arraySize == "" ) {
         alert("입력한 값이 없습니다.");
     } else {
-        document.querySelector('#arrayPlayer').innerHTML = playerTxtArray ; // 생성된 배열 출력
-        // console.log(playerTxtArray);
-    }
-    user = playerTxtArray;
-    // console.log(user);
-}
-/* 2) 마라톤 시작 완주자, 미완주자 생서 */
-function startGame() {
-    let allUser = user;
-    let finishedList = [];
-    let unfinishedList = "";
-    
-    console.log(allUser.length - 1);
+        document.querySelector('#arrayPlayer').innerHTML = "[" + playerTxt + "]"; // 생성된 배열 출력
+        // document.querySelector('.arrySize').value = "";
+        console.log(playersArray);
+    }    
+    // console.log(str1);
 
-    while(allUser.length > Number(allUser.length - 1)){
-        let moveUser  = allUser.splice(Math.floor(Math.random() * allUser.length),1)[0];
-        finishedList.push(moveUser);
-    }
-    document.querySelector("#finishedList").innerHTML = finishedList ; // 완주자 리스트
-    document.querySelector("#unfinishedList").innerHTML = unfinishedList; // 미완주자 리스트
+
 }
+
 /* 유효성 검사 */
 function maxBudget(el) {
     let val = el.value;

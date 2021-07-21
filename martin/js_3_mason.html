@@ -59,16 +59,14 @@
             <p class="t1">참가자 = [<span id="arrayPlayer"></span>]</p>
 
             <p class="t1">
-                마라톤 시작 <button type="button" class="btn_calc material-bubble" onclick="startGame()">시작</button>
+                commands를 랜덤 생성 <button type="button" class="btn_calc material-bubble" onclick="makeCommands()">생성</button>
                 
             </p>
             <p class="t1">
-                완주자 목록 =  [<span id="finishedList"></span>]
+                자동 생성된 commands의 길이 =  <span id="commandsSize"></span> <br>
             </p>
             
-            <p class="t1">
-                미완주자 = [<span id="unfinishedList"></span>]
-            </p>
+            <p class="t1">commands = <span id="commandsArray"></span></p>
             <!-- <input type="text" class="text_value"> -->
 
             <button onclick="calculate()" class="btn_calc material-bubble">calculate</button>
