@@ -119,17 +119,11 @@ function makePlayer() {
 }
 /* 2) 마라톤 시작 완주자, 미완주자 생서 */
 function startGame() {
-    let allUser = user;
-    let finishedList = [];
-    let unfinishedList = "";
-    
-    console.log(allUser.length - 1);
 
-    while(allUser.length > Number(allUser.length - 1)){
-        let moveUser  = allUser.splice(Math.floor(Math.random() * allUser.length),1)[0];
-        finishedList.push(moveUser);
-    }
-    document.querySelector("#finishedList").innerHTML = finishedList ; // 완주자 리스트
+    let getUser = user;
+    let unfinishedList = getUser.splice(Math.floor(Math.random() * getUser.length),1);    
+
+    document.querySelector("#finishedList").innerHTML = getUser ; // 완주자 리스트
     document.querySelector("#unfinishedList").innerHTML = unfinishedList; // 미완주자 리스트
 }
 /* 유효성 검사 */
