@@ -12,6 +12,8 @@ function result() {
     '7': [2, 0], '8': [2, 1], '9': [2, 2],
     '*': [3, 0], '0': [3, 1], '#': [3, 2]
     };
+
+    
     for(var i=0; i<number.length;i++){
         if(number[i]==1||number[i]==4||number[i]==7) {
             answer.push('L');
