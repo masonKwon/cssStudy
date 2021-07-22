@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <!--
+  <h4> 
+    입력 예시 [1,5,2,6,3,7,4], [[2,5,3], [4,4,1], [1,7,3]]
+  </h4> 
+  
+  <label for="domTextElement">Input: </label>
+  <input type="text" id="domTextElement" > -->
+  
+  <button type="button"  onclick="getValueInput()"> 
+      click 
+  </button> 
+  
+  <p id="valueInput"></p> 
+
+  <script> 
+
+    const getValueInput = () =>{
+      //argument로 넣는 방법 + html에서 입력값을 javascript로 받아오고 javascipt의 결과값을 html로 넘기는 방법
+      let arr = [1, 5, 2, 6, 3, 7, 4]; //arguments[0];
+      let cmd = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]; //arguments[1];
+
+      var result = null;
+      let newArr = new Array();
+      let resultArray = new Array();
+
+      // the number of [i, j, k] array
+      for(var i = 0; i < cmd.length; i++) {
+        // slice
+        newArr = arr.slice(cmd[i][0]-1, cmd[i][1]);
+
+        // ascending sort
+        newArr.sort(function(a,b) {
+            return a - b;
+        });
+
+        // find number and make result array
+        result = newArr[cmd[i][2]-1];
+        resultArray.push(result);
+      }
+
+      document.getElementById("valueInput").innerHTML = resultArray;
+      
+      /*let inputValue = document.getElementById("domTextElement").value;
+
+      console.log(inputValue);
+      let arr = inputValue.slice(0, 1);
+      let cmd = inputValue.slice(1, 2);
+
+      var result = null;
+      let newArr = [];
+      let resultArray = new Array(cmd.length);
+
+      // the number of [i, j, k] array
+      for(var i = 0; i < cmd.length; i++) {
+        // slice
+        newArr = arr.slice(cmd[i][0]-1, cmd[i][1]);
+
+        // ascending sort
+        newArr.sort(function(a,b) {
+            return a - b;
+        });
+
+        // find number and make result array
+        result = newArr[cmd[i][2]-1];
+        resultArray.push(result);
+      }
+
+      document.getElementById("valueInput").innerHTML = resultArray;*/
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+  <button type="button"  onclick="maximumKind()"> 
+      click 
+  </button> 
+  
+  <p id="valueInput"></p> 
+
+  <script> 
+
+    const maximumKind = () =>{
+        const nums = [3, 3, 3, 2, 2, 2];
+
+        // if length of nums is odd number, print alert
+        if((nums.length % 2) == 1) {
+            document.getElementById("valueInput").innerHTML = '배열의 개수는 짝수개로 입력해주세요!'';
+            return;
+        }
+
+        const newNums = [...new Set(nums)]; // use Set to get rid of same kind of pokemon
+
+        const max = newNums.length // the maximum kind of pokemon
+        const pickNum = nums.length / 2; // the number of pokemon to choose
+
+        if(max <= pickNum) {
+            document.getElementById("valueInput").innerHTML = max;
+        }
+        else {
+            document.getElementById("valueInput").innerHTML = pickNum;
+        }
+    }
+
+  </script>
+</body>
+</html>
