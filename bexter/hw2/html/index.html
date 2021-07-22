@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+  <button type="button"  onclick="getValueInput()"> 
+      click 
+  </button> 
+  
+  <p id="valueInput"></p> 
+
+  <script> 
+
+    const getValueInput = () =>{
+      //input example1
+      let participant = ["leo", "kiki", "eden"];
+      let completion = ["eden", "kiki"];
+
+      //input example2
+      /*let participant = ["mislav", "stanko", "mislav", "ana"];
+      let completion =  ["stanko", "ana", "mislav"];*/
+
+      //input example3
+      /*let participant = ["marina", "josipa", "nikola", "vinko", "filipa"];
+      let completion = ["josipa", "filipa", "marina", "nikola"];*/
+
+      let completion_fail = '';
+
+      participant.sort();
+      completion.sort();
+
+      for(var i = 0; i < participant.length; i++) {
+        if(participant[i] !== completion[i]) {
+            completion_fail = participant[i];
+            break;
+        }
+      }
+      document.getElementById("valueInput").innerHTML = completion_fail;
+    }
+    
+  </script>
+</body>
+</html>
